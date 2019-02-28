@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css?family=Spectral" rel="stylesheet">
+
+<style>
+
+h1 {
+  color: black;
+  font-family: 'Spectral', serif;
+  font-size: large;
+  text-align: center;
+  font-size: 60px;
+  margin-top: 400px;
+}
+
+body {
+	color: #fff;
+	background: linear-gradient(-45deg, #138d90, #061283, #FD3C3C, #FFB74C);
+	background-size: 400% 400%;
+	-webkit-animation: Gradient 10s ease infinite;
+	-moz-animation: Gradient 10s ease infinite;
+	animation: Gradient 10s ease infinite;
+}
+
+@-webkit-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@-moz-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+
+
+</style>
+</head>
+<body>
+
+  <h1 id="demo"></h1>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Jun 25, 2019 15:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get todays date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+
+  // Output the result in an element with id="demo"
+  document.getElementById("demo").innerHTML = days + " päivää ja " + (hours+2) + " tuntia";
+
+  // If the count down is over, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "Tänään <3 ";
+  }
+}, 1000);
+</script>
+
+</body>
+</html>
